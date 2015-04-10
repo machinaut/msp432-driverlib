@@ -1,0 +1,11 @@
+<projectSpec>
+  <project compilerBuildOptions="-I${MSPWAREDLIB_ROOT}" device="MSP432P401R" name="empty_project_with_rom_debugging" >
+    <pathVariable name="MSPWAREDLIB_ROOT" path="../../driverlib/MSP432P4xx/" scope="project" />
+    <file action="copy" path="../main.c" openOnCreation="true" />
+    <file action="copy" path="../msp432_startup_ccs.c" overwriteExisting="true" />
+    <file action="link" path="../../driverlib/MSP432P4xx/ccs/msp432p4xx_driverlib.lib" />
+	<file action="copy" path="../readme.txt" />
+	<file action="copy" path="../../rom/driverlib.c" excludeFromBuild="true" />
+	<file action="copy" path="../../rom/driverlib.out" excludeFromBuild="true" />
+  </project>
+</projectSpec>
